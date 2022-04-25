@@ -20,6 +20,13 @@ body {
   background-color: #f5f7e8 !important;
 }
 
+.App{
+  position: absolute;
+  z-index: 1;
+  /* top: 1rem;
+  left: 1rem; */
+}
+
 .grid-container {
   display: -ms-grid;
   display: grid;
