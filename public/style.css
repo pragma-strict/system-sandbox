@@ -21,7 +21,7 @@ body {
 }
 
 .App{
-  position: absolute;
+  position: relative;
   z-index: 1;
   /* top: 1rem;
   left: 1rem; */
