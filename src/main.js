@@ -2,6 +2,8 @@
 
 */
 
+import { Square } from "./components/square.ts";
+
 // DOM Ids and elements
 let ID_PARENT = 'p5-canvas-container';
 let INTERFACE_DATA;
@@ -12,9 +14,10 @@ let inputRaw = [];
 
 
 function setup() {
-  INTERFACE_DATA = document.getElementById('interface-data');
   initializeP5Canvas();
   world = new World();
+  console.log("Running setup")
+  // let sq = new Square();
 }
 
 
