@@ -1,23 +1,19 @@
-/*
-
-*/
-
-import { Square } from "./components/square.ts";
+import {Square} from "./components/square.js";
+// import createCanvas from 'p5';
 
 // DOM Ids and elements
-let ID_PARENT = 'p5-canvas-container';
+// let ID_PARENT = 'p5-canvas-container';
 let INTERFACE_DATA;
 
 let canvas;
 
-let inputRaw = [];
+// let inputRaw = [];
 
-
-function setup() {
+// With this syntax I can declare global variables and functions. This will allow p5 to access them.
+window.setup = ()=>{
   initializeP5Canvas();
   world = new World();
-  console.log("Running setup")
-  // let sq = new Square();
+  let sq = new Square();
 }
 
 
@@ -31,7 +27,7 @@ function updateCanvasSize(){
 }
 
 
-function draw(){
+window.draw = ()=>{
   background(GRAY_DARK);
   world.drawGrid();
 }
@@ -73,22 +69,22 @@ function parseInputData(){
 }
 
 
-function mousePressed(){
+window.mousePressed = () => {
   world.mousePressed();
 }
 
 
-function mouseReleased(){
+window.mouseReleased = () => {
   world.mouseReleased();
 }
 
 
 // Reposition the origin
-function mouseDragged(){
+window.mouseDragged = () => {
   world.mouseDragged();
 }
 
 
-function windowResized() {
+window.windowResized = () => {
   updateCanvasSize();
 }

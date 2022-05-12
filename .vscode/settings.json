@@ -4,7 +4,7 @@
         "**/.vscode": true,
         "**/*.css": true,
         "**/*.css.map": true,
-        "**/build": true,
+        "**/build": false,
         "**/node_modules": true
     }
 }
